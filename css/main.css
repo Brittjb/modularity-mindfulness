@@ -25,3 +25,13 @@ img {
   display: block;
   width: 100%;
 }
+
+header {
+  display: grid;
+  grid-template-columns: repeat(2 1fr);
+  grid-template-areas: "col1   col2"
+                       "banner banner"
+}
+.garden {
+  grid-area: banner;
+}
