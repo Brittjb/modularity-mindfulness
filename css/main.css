@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 1rem;
 }
 
 img {
@@ -27,11 +27,157 @@ img {
 }
 
 header {
+  display: contents;
   display: grid;
-  grid-template-columns: repeat(2 1fr);
-  grid-template-areas: "col1   col2"
-                       "banner banner"
+  grid-template-areas:
+    "title"
+    "col"
+    "banner";
 }
+
+h1 {
+  margin: 0;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  font-size: 2rem;
+}
+
+h1 i {
+  grid-row: 1;
+}
+
+.title {
+  font-size: 1.125rem;
+}
+
 .garden {
   grid-area: banner;
+  margin: 1rem 0;
+  margin-bottom: 1.5rem;
+}
+
+nav {
+  grid-area: col;
+}
+
+ul {
+  margin: 0;
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  color: #3783a3;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.125rem;
+}
+
+li {
+  text-decoration: none;
+}
+
+div {
+  margin-bottom: 3rem;
+  border-top: .2rem solid #e2e2e2;
+  border-bottom: .2rem solid #e2e2e2;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+  font-weight: normal;
+  padding: .5rem;
+}
+
+div p {
+  margin: 0;
+  text-align: center;
+  padding: .5rem 1rem;
+}
+
+.articles {
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h3 {
+  display: grid;
+  font-size: 1.5rem;
+}
+
+h3 span {
+  font-size: 1rem;
+}
+
+.articles p {
+  text-align: left;
+  padding: 0;
+}
+
+.articles a {
+  display: flex;
+  text-decoration: none;
+  border: .2rem solid #3783a3;
+  border-radius: .3rem;
+  padding: .5rem;
+  margin: 1.5rem 0;
+  color: #3783a3;
+}
+
+footer {
+  text-align: center;
+  font-size: .75rem;
+}
+
+@media only screen and (min-width: 38em) {
+
+  h1 {
+    justify-content: left;
+    justify-items: left;
+  }
+
+  header {
+    display: flex;
+  }
+
+  div {
+    padding: .3rem 3rem;
+    margin-bottom: 2.5rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .articles {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  article {
+    width: 33.333%;
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+  }
+
 }
